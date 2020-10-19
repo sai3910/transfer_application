@@ -140,8 +140,8 @@ class ApplicantUserJsonView(BaseDatatableView):
             return super(ApplicantUserJsonView, self).render_column(row, column)
 
     def get_initial_queryset(self):
-        # import ipdb;ipdb.set_trace()
-        return ApplicantUser.objects.filter(email__staff=False).order_by('-au_points')
+        
+        return ApplicantUser.objects.filter(email__staff=False).filter(au_points__gt=0).order_by('-au_points')
 
     def filter_queryset(self, qs):
         # use parameters passed in GET request to filter queryset
