@@ -1,0 +1,16 @@
+# General
+# ------------------------------------------------------------------------------
+USE_DOCKER=yes
+IPYTHONDIR=/app/.ipython
+# Redis
+# ------------------------------------------------------------------------------
+REDIS_URL=redis://redis:6379/0
+
+# Celery
+export CELERY_BROKER_URL=redis://localhost:6379/0
+# ------------------------------------------------------------------------------
+
+# Flower
+CELERY_FLOWER_USER=VnelLGzMTVGyGLuJkFFcPHEBTRAhjjrF
+CELERY_FLOWER_PASSWORD=p0X6QXyntIlOxgAZh9G9gyBoQwAmCj9g9LhU3KnsZk4xewkMtfekbzl0TA0dJazQ
+
